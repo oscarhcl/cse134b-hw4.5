@@ -153,3 +153,38 @@ hr {
 	/* added line to stop words getting smushed together (as they go onto separate lines and some screen readers do not understand line feeds as a space */
 	white-space: nowrap;
 }
+
+::view-transition-old(root),
+::view-transition-new(root) {
+	animation-duration: 0.4s;
+}
+
+::view-transition-old(blog-post) {
+	animation: fade-out 0.3s ease-out;
+}
+
+::view-transition-new(blog-post) {
+	animation: fade-in 0.3s ease-in;
+}
+
+@keyframes fade-out {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(-20px);
+	}
+}
+
+@keyframes fade-in {
+	from {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	to {
+		opacity: 1;
+		transform: translateX(0);
+	}
+}

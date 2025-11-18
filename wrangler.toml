@@ -1,5 +1,6 @@
-name = "cse134-hw45"
+name = "cse134b-hw45"
 compatibility_date = "2025-11-18"
+pages_build_output_dir = "dist"
 
-[assets]
-directory = "."
+[site]
+bucket = "dist"

@@ -2,6 +2,7 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import { ViewTransitions } from 'astro:transitions';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 ---
 
@@ -9,10 +10,11 @@ import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 <html lang="en">
 	<head>
 		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+		<ViewTransitions />
 	</head>
 	<body>
 		<Header />
-		<main>
+		<main transition:animate="slide">
 			<h1>Welcome to My CAT Writing Portfolio</h1>
 			<p>
 				This site showcases my academic writing journey through UC San Diego's <strong>Culture, Art, and Technology (CAT)</strong> program.
