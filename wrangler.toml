@@ -1,2 +1,5 @@
-name = "cse134b-hw45"
+name = "cse134-hw4"
 compatibility_date = "2025-11-18"
+
+[assets]
+directory = "."
